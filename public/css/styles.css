@@ -380,64 +380,65 @@ a {
 
 #editstory .container .form-group label {
     display: block;
+    font-size: 16px;
+    padding-top: 10px;
 }
 
 #editstory .container .form-group #title {
     width: 600px;
     background-color: white;
+    filter: none;
 }
 
 #editstory .container .form-group #description {
     width: 600px;
-    height: 300px;
+    height: 250px;
     background-color: white;
 }
 
-/* ------------ End Edit Story Section ------------ */
-
-/* --------------------- Footer --------------------- */
-
-#footer {
-    background-image: linear-gradient(180deg, rgb(25, 0, 32) 0%, rgb(0, 0, 0) 100%);
-    z-index: 1;
-}
-
-#footer .footer {
-    min-height: 200px;
-    flex-direction: column;
-    padding-top: 30px;
-    padding-bottom: 10px;
-}
-
-#footer h2 {
-    color: white;
-    font-weight: 500;
-    font-size: 1.8rem;
+#editstory .container .buttons .cancel {
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
     letter-spacing: .1rem;
-    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .2s ease;
+    transition-property: background-color, color;
 }
 
-#footer .social-icon {
-    display: flex;
-    margin-bottom: 20px;
+#editstory .container .buttons .save {
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .2s ease;
+    transition-property: background-color, color;
 }
 
-#footer .social-item {
-    height: 50px;
-    width: 50px;
-    margin-bottom: 0 5px;
+#editstory .container .buttons .cancel:hover {
+    color: rgb(0, 71, 142);
+    border: 1px solid rgb(32, 99, 167);
 }
 
-#footer .social-item img {
-    filter: grayscale(1);
-    transition: .7s ease filter;
+#editstory .container .buttons .save:hover {
+    color: rgb(0, 71, 142);
+    border: 1px solid rgb(32, 99, 167);
 }
 
-#footer .social-item:hover img {
-    filter: grayscale(0);
-}
-
-/* ------------------- End Footer ------------------- */
+/* ------------ End Edit Story Section ------------ */
 
 /* Keyframes */
 
