@@ -4,7 +4,6 @@ const Story = require('./models/story')
 const storiesRouter = require('./routes/stories')
 const methodOverride = require('method-override')
 const app = express()
-const server = http.createServer(app); git
 
 
 mongoose.connect('mongodb://localhost/stories', { useNewUrlParser: true, useUnifiedTopology: true })
