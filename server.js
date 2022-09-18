@@ -22,4 +22,4 @@ app.get('/', async (req, res) => {
 
 app.use('/stories', storiesRouter)
 
-app.listen(5000)
+app.listen(process.env.PORT || 5000)
