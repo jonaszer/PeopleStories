@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+}
+
+#title .container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.newstory {
+    display: inline-block;
+    padding: 10px 30px;
+    color: rgb(56, 155, 255);
+    background-color: transparent;
+    border: 2px solid rgb(56, 155, 255);
+    border-radius: 20px;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 30px;
+    transition: .3s ease;
+    transition-property: background-color, color;
+}
+
+.newstory:hover {
+    color: black;
+    background-color: rgb(56, 155, 255);
+}
+
+.brand h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+.brand h1 span {
+    color: rgb(56, 155, 255);
+}
+
+/* ----------------- Menu Section ---------------- */
+
+#menu {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+}
+
+#menu .menu {
+    min-height: 8vh;
+    background-color: rgba(4, 4, 4, 0.642);
+    transition: .7s ease background-color;
+    opacity: .9;
+}
+
+.menu .nav-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#menu .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+
+#menu .nav-list ul a {
+    font-size: 1.8rem;
+    font-weight: 500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#menu .nav-list ul li {
+    display: inline-block;
+}
+
+#menu .nav-list ul li:hover a {
+    color: rgb(56, 155, 255);
+    transition: .3s ease-in-out;
+}
+
+
+/* --------------- End Menu Section -------------- */
+
+/* ---------------- Title Section ---------------- */
+
+#title {
+    background-image: url(./images/background.jpg);
+    background-size: cover;
+    background-position: top center;
+    position: relative;
+    z-index: 1;
+}
+
+#title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(0, 25, 36);
+    opacity: .9;
+    z-index: -1;
+}
+
+#title .title {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+#title h1 {
+    display: block;
+    width: fit-content;
+    font-size: 6rem;
+    position: relative;
+    color: transparent;
+    animation: text_reveal .5s ease forwards;
+    animation-delay: 1s;
+}
+
+#title h1:nth-child(1) {
+    animation-delay: 1s;
+}
+
+#title h1:nth-child(2) {
+    animation: text_reveal_name .5s ease forwards;
+    animation-delay: 2s;
+}
+
+#title h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: rgb(56, 155, 255);
+    animation: text_reveal_box 1s ease;
+    animation-delay: .3s;
+}
+
+#title h1:nth-child(1) span {
+    animation-delay: .5s;
+}
+
+#title h1:nth-child(2) span {
+    animation-delay: 1.5s;
+}
+
+/* ---------------- End Title Section --------------- */
+
+/* ----------------- Stories Section --------------- */
+
+#stories {
+    background-image: linear-gradient(90deg, rgb(25, 52, 63) 0%, rgb(0, 25, 35) 20%, rgb(0, 25, 35) 80%, rgb(25, 52, 63) 100%);
+    height: 100%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#stories .card {
+    background-color: rgb(165, 197, 220);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 800px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#stories .card h1 {
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: rgb(53, 53, 53);
+}
+
+#stories .card h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+#stories .card p {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    width: 400px;
+    height: 75px;
+    overflow-y: hidden;
+}
+
+#stories .card .readmore {
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .2s ease;
+    transition-property: background-color, color;
+}
+
+#stories .card .readmore:hover {
+    color: rgb(0, 71, 142);
+    border: 1px solid rgb(32, 99, 167);
+}
+
+/* --------------- End Stories Section ------------- */
+
+/* --------------- Show More Section --------------- */
+
+#showmore {
+    background-image: linear-gradient(90deg, rgb(25, 52, 63) 0%, rgb(0, 25, 35) 20%, rgb(0, 25, 35) 80%, rgb(25, 52, 63) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#showmore .container {
+    background-color: rgb(165, 197, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#showmore .container h1 {
+    margin-top: 20px;
+    padding-top: 0%;
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: rgb(53, 53, 53);
+}
+
+#showmore .container h2 {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: black;
+}
+
+#showmore .container p {
+    text-align: center;
+    color: black;
+    font-size: 16px;
+    max-width: 780px;
+    min-width: 780px;
+    height: 300px;
+    overflow-y: auto;
+}
+
+#showmore .container .buttons {
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#showmore .container .buttons a {
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .2s ease;
+    transition-property: background-color, color;
+}
+
+#showmore .container .buttons .allstories:hover {
+    background-color: rgb(0, 255, 68);
+}
+
+#showmore .container .buttons .edit:hover {
+    background-color: rgb(217, 255, 0);
+}
+
+#showmore .container .buttons .delete:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+#showmore .container .buttons .delete {
+    display: inline-block;
+    color: black;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    transition: .2s ease;
+    transition-property: background-color, color;
+}
+
+/* ------------- End Show More Section ------------- */
+
+/* -------------- Edit Story Section -------------- */
+
+#editstory {
+    background-image: linear-gradient(90deg, rgb(25, 52, 63) 0%, rgb(0, 25, 35) 20%, rgb(0, 25, 35) 80%, rgb(25, 52, 63) 100%);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#editstory .container {
+    background-color: rgb(165, 197, 220);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 800px;
+    height: 500px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+#editstory .container h1 {
+    margin-top: 20px;
+    padding-top: 0%;
+    margin-bottom: 5px;
+    font-size: 3rem;
+    color: rgb(53, 53, 53);
+}
+
+/* ------------ End Edit Story Section ------------ */
+
+/* --------------------- Footer --------------------- */
+
+#footer {
+    background-image: linear-gradient(180deg, rgb(25, 0, 32) 0%, rgb(0, 0, 0) 100%);
+    z-index: 1;
+}
+
+#footer .footer {
+    min-height: 200px;
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+#footer h2 {
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#footer .social-item {
+    height: 50px;
+    width: 50px;
+    margin-bottom: 0 5px;
+}
+
+#footer .social-item img {
+    filter: grayscale(1);
+    transition: .7s ease filter;
+}
+
+#footer .social-item:hover img {
+    filter: grayscale(0);
+}
+
+/* ------------------- End Footer ------------------- */
+
+/* Keyframes */
+
+@keyframes text_reveal_box {
+    50% {
+        width: 100%;
+        left: 0;
+    }
+
+    100% {
+        width: 0;
+        left: 100%;
+    }
+}
+
+@keyframes text_reveal {
+    100% {
+        color: white;
+    }
+}
+
+@keyframes text_reveal_name {
+    100% {
+        color: rgb(56, 155, 255);
+    }
+}
+
+/* End Keyframes */

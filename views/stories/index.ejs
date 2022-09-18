@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <section id="menu">
+            <div class="menu container">
+                <div class="nav-bar">
+                    <div class="brand">
+                        <a href="#title">
+                            <h1>People <span>Stories</span></h1>
+                        </a>
+                    </div>
+                    <div class="nav-list">
+                        <ul>
+                            <li><a href="#stories" data-after="Home">Stories</a></li>
+                            <li><a href="#channels" data-after="Channels">Login</a></li>
+                            <li><a href="#faq" data-after="FAQ">Register</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="title">
+            <div class="title container">
+                <div>
+                    <h1>Welcome to<span></span></h1>
+                    <h1>People Stories<span></span></h1>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories">
+            <a href="/stories/new" class="newstory">New Story</a>
+            <div class="stories">
+                <% stories.forEach(story=> { %>
+                    <div class="card">
+                        <h1>
+                            <%= story.title %>
+                        </h1>
+                        <h2>
+                            <%= story.createdAt.toLocaleDateString() %>
+                        </h2>
+                        <p>
+                            <%= story.description %>
+                        </p>
+                        <a href="stories/<%= story.id %>" class="readmore">Read More</a>
+                    </div>
+            </div>
+            <% }) %>
+        </section>
+    </body>
+
+</html>

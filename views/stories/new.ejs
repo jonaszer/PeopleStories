@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('layouts/header'); -%>
+
+    <body>
+        <div class="container">
+            <h1 class="mb-4">New Story</h1>
+
+            <form action="/stories" method="POST">
+                <%- include('form_fields') %>
+            </form>
+        </div>
+    </body>
+
+</html>
